@@ -1,8 +1,10 @@
 global:
   scrape_interval:     15s
   evaluation_interval: 15s
+
   external_labels:
-    monitor: 'codelab-monitor'
+    monitor: 'prometheus-grafana-blackbox(clearwater)'
+
 scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
@@ -11,53 +13,8 @@ scrape_configs:
   - job_name: 'graphana'
     scrape_interval: 5s
     static_configs:
-      - targets: ['192.168.50.146:3000']
-  - job_name: 'node_exporter'
+      - targets: ['192.168.50.179:3000']
+  - job_name: 'contener-exporter'
     scrape_interval: 5s
     static_configs:
-      - targets: ['192.168.50.146:9100']
-  - job_name: 'blackbox'
-    metrics_path: /probe
-    params:
-      module: [http_2xx] #Config de base qui marche
-    static_configs:
-      - targets:
-        - http://prometheus.io    # Target to probe with http.
-        - https://prometheus.io   # Target to probe with https.
-        - http://192.168.50.146:8080 # Target to probe with http on port 8080.
-        - 192.168.50.146
-    relabel_configs:
-      - source_labels: [__address__]
-        target_label: __param_target
-      - source_labels: [__param_target]
-        target_label: instance
-      - target_label: __address__
-        replacement: 192.168.50.146:9115  # The blackbox exporter's real hostname:port
-  - job_name: 'ellis'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:32776']
-  - job_name: 'sprout'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:32774']
-  - job_name: 'bono'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:3478']
-  - job_name: 'homer'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:32771']
-  - job_name: 'homestead'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:32773']
-  - job_name: 'ralf'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:32768']
-  - job_name: 'astaire'
-    scrape_interval: 5s
-    static_configs:
-      - targets: ['192.168.50.146:32775']
+      - targets: ['192.168.50.179:9104']
