@@ -26,6 +26,10 @@ In the navigator, type:
 * `ip@:9090` to view prometheus Dashbord   
 * and `ip@:3000` to view grafana Dashbord
 
+## Storage
+
+We have implement a cript who copi the metrics in prometheus volume and put it in a file. We have called this file __readwrite.py__ 
+
 # Contributing
 
 We'd love for you to contribute to this container. You can request new features by creating an issue, or submit a pull request with your contribution.
