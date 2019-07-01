@@ -1,30 +1,15 @@
 version: '2'
 services:
-  grafana: 
+  grafana:
     image: grafana/grafana
     container_name: grafana
     restart: always
-    ports: 
-      - 3000:3000 
+    ports:
+      - 3000:3000
     networks:
-      - monitoring 
+      - monitoring
     volumes:
       - grafana-volume:/var/lib/grafana
-  influxdb:
-    image: influxdb:latest 
-    container_name: influxdb
-    environment:
-      - INFLUXDB_DB=prometheus
-    command: ['influxd','-config','/opt/monitoring/influxdb/influxdb.conf',]
-    #command: ['influxd']
-    ports: 
-      - 8086:8086
-    networks: 
-      - monitoring 
-    volumes:
-            #- /opt/monitoring/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro      
-      - /opt/monitoring/influxdb/:/etc/influxdb/      
-      - influxdb-volume:/var/lib/influxdb
 
   containerexporter:
     image: prom/container-exporter
@@ -35,38 +20,19 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /sys/fs/cgroup:/cgroup
 
-        #remotestorageadapter:
-        #image: gavind/prometheus-remote-storage-adapter:1.0
-        #ports:
-        #- 9201:9201
-        #command: ['-influxdb-url=http://localhost:8086','-influxdb.database=prometheusdb','-influxdb.username=prometheus','-influxdb.retention-policy=autogen']
-        #networks:
-        #- monitoring
-        #depends_on:
-        #- influxdb
-
   prometheus:
     image: prom/prometheus:v1.7.1
     container_name: prometheus
     ports:
       - 9090:9090
-    networks:
-      - monitoring
     volumes:
       - /opt/monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-    command: [
-       "--config.file=/etc/prometheus/prometheus.yml",
-    ]
+    command: ['--config.file=/etc/prometheus/prometheus.yml']
     depends_on:
-            # - remotestorageadapter
-      - influxdb
       - containerexporter
-        
 
 networks:
   monitoring:
 volumes:
   grafana-volume:
-     external: true
-  influxdb-volume: 
-     external: true 
+
