@@ -18,8 +18,8 @@ After, stay on projet repository and type:
 `docker_compose up`
 
 In the navigator, type:
-`1. `ip@:9090` to view prometheus Dashbord`  
-`2. and `ip@:3000` to view grafana Dashbord`
+*`ip@:9090` to view prometheus Dashbord   
+* and `ip@:3000` to view grafana Dashbord
 
 # Contributing
 
