@@ -2,6 +2,10 @@
 Monitoring and implamentation of __VIMS-ClearWater__ wich __Prometheus__, __Grafana__ and __containers-Exporters__
 
 ----------------
+
+## NB: here you need to use only two files: docker-compose.yml and prometheus.yml
+
+
 ## Prerequisites
 To start you need to install [__docker__ and __docker-compose__](https://websiteforstudents.com/how-to-install-docker-and-docker-compose-on-ubuntu-16-04-18-04/)
 
