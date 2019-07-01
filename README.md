@@ -11,11 +11,15 @@ We have used and docker-compose.yml
  
 To create a volume  for grafana :  
 
-----
-docker volume create --name=grafana-volume
-----
-After:
+`docker volume create --name=grafana-volume`
 
+After, stay on projet repository and type:
+
+`docker_compose up`
+
+In the navigator, type:
+`1. `ip@:9090` to view prometheus Dashbord`  
+`2. and `ip@:3000` to view grafana Dashbord`
 
 # Contributing
 
