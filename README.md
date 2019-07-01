@@ -19,7 +19,7 @@ After, stay on projet repository and type:
 
 In the navigator, type:  
 
-*`ip@:9090` to view prometheus Dashbord   
+* `ip@:9090` to view prometheus Dashbord   
 * and `ip@:3000` to view grafana Dashbord
 
 # Contributing
