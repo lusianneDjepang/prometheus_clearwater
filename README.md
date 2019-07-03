@@ -29,8 +29,7 @@ In a browser, type:
 
 ## Storage
 
-A script in python which copy the metrics from Prometheus to a file, is available on __readwrite.py__ 
---
+A script in python which copy the metrics from Prometheus to a file, is available on __readwrite.py__   
 We have chosed to work with __CVS file__. The extension file CVS (Comma-Separated Values)  is a text file that serves as a swap file between different software, most commonly between a spread sheet and another program. It allows to get rid of proprietary file formats, often complex, and unknown to other software.
 
 # Contributing
