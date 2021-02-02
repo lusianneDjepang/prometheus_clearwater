@@ -32,6 +32,12 @@ In a browser, type:
 A script in python which copy the metrics from Prometheus to a file, is available on __readwrite.py__   
 We have chosed to work with __CVS file__. The extension file CVS (Comma-Separated Values)  is a text file that serves as a swap file between different software, most commonly between a spread sheet and another program. It allows to get rid of proprietary file formats, often complex, and unknown to other software.
 
+# References
+
+- `java - How to run a JAR file - Stack Overflow <http://stackoverflow.com/questions/1238145/how-to-run-a-jar-file>`_.
+
+- `Setting an Application's Entry Point (The Java™ Tutorials > Deployment > Packaging Programs in JAR Files) <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
+
 # Contributing
 
 We'd love for you to contribute to this container. You can request new features by creating an issue, or submit a pull request with your contribution.
