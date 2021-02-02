@@ -34,9 +34,9 @@ We have chosed to work with __CVS file__. The extension file CVS (Comma-Separate
 
 # References
 
-- `java - How to run a JAR file - Stack Overflow <http://stackoverflow.com/questions/1238145/how-to-run-a-jar-file>`_.
-
-- `Setting an Application's Entry Point (The Java™ Tutorials > Deployment > Packaging Programs in JAR Files) <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
+- [Prometheus] https://github.com/prometheus/prometheus
+- [Clearwater-docker] https://github.com/cherrared/clearwater-docker
+- [Prometheus-remote-storage] https://github.com/gdmello/prometheus-remote-storage
 
 # Contributing
 
