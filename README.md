@@ -37,6 +37,7 @@ We have chosed to work with __CVS file__. The extension file CVS (Comma-Separate
 - Prometheus https://github.com/prometheus/prometheus
 - Clearwater-docker https://github.com/cherrared/clearwater-docker
 - Prometheus-remote-storage https://github.com/gdmello/prometheus-remote-storage
+- Container_exporter https://github.com/docker-archive/infra-container_exporter
 
 # Contributing
 
